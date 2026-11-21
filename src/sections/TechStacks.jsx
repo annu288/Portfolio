@@ -3,7 +3,7 @@ import { techStackImgs } from "../constants";
 const TechStacks = () => {
   return (
     <section
-      id="tech-stacks"
+      id="skills"
       className="flex-center section-padding text-white"
     >
       <div className="w-full h-full md:px-10 px-5">

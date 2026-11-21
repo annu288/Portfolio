@@ -80,23 +80,23 @@ const Experience = () => {
         />
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
-            {expCards.map((card, index) => {
-              let logoSrc = "/images/logo1.jpg";
-              let logoAlt = "TCS logo";
-
-              if (index === 1) {
-                logoSrc = "/images/logo2.png";
-                logoAlt = "Company logo 2";
-              } else if (index === 2) {
-                logoSrc = "/images/logo3.png";
-                logoAlt = "Company logo 3";
-              }
-
+            {expCards.map((card) => {
               return (
                 <div key={card.title} className="exp-card-wrapper timeline-card">
                   <div className="xl:w-2/6 flex items-center justify-center">
                     <div className="company-logo-wrapper">
-                      <img src={logoSrc} alt={logoAlt} />
+                      <img
+                        src={card.logoPath}
+                        alt={card.logoAlt}
+                        onError={(e) => {
+                          // No logo file yet: show the company name instead
+                          e.currentTarget.hidden = true;
+                          e.currentTarget.nextElementSibling.hidden = false;
+                        }}
+                      />
+                      <span hidden className="text-2xl font-semibold text-center">
+                        {card.company}
+                      </span>
                     </div>
                   </div>
 
@@ -108,14 +108,9 @@ const Experience = () => {
                     <div className="expText relative z-20">
                       <h1 className="font-semibold text-3xl flex items-center gap-3">
                         <span>{card.title}</span>
-                        {index === 0 && (
+                        {card.clientLogo && (
                           <span className="exp-title-logo">
-                            <img src="/images/Amex.png" alt="American Express logo" />
-                          </span>
-                        )}
-                        {index === 1 && (
-                          <span className="exp-title-logo">
-                            <img src="/images/fnp.png" alt="Ferns N Petals logo" />
+                            <img src={card.clientLogo} alt={card.clientLogoAlt} />
                           </span>
                         )}
                       </h1>

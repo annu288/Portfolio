@@ -7,6 +7,10 @@ const navLinks = [
     name: "Experience",
     link: "#experience",
   },
+  {
+    name: "Skills",
+    link: "#skills",
+  },
 ];
 
 const words = [
@@ -74,21 +78,99 @@ const abilities = [
   },
 ];
 
+const techStackImgs = [
+  {
+    name: "React Developer",
+    imgPath: "/images/logos/react.png",
+  },
+  {
+    name: "Python Developer",
+    imgPath: "/images/logos/python.svg",
+  },
+  {
+    name: "Backend Developer",
+    imgPath: "/images/logos/node.png",
+  },
+  {
+    name: "Interactive Developer",
+    imgPath: "/images/logos/three.png",
+  },
+  {
+    name: "Project Manager",
+    imgPath: "/images/logos/git.svg",
+  },
+];
+
+const techStackIcons = [
+  {
+    name: "React Developer",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Node Developer",
+    modelPath: "/models/node-transformed.glb",
+    scale: 0.8,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Backend Developer",
+    modelPath: "/models/node-transformed.glb",
+    scale: 5,
+    rotation: [0, -Math.PI / 2, 0],
+  },
+  {
+    name: "Interactive Developer",
+    modelPath: "/models/three.js-transformed.glb",
+    scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Project Manager",
+    modelPath: "/models/git-svg-transformed.glb",
+    scale: 0.05,
+    rotation: [0, -Math.PI / 4, 0],
+  },
+];
+
 const expCards = [
   {
-    logoPath: "/images/logo1.png",
-    title: "System Engineer",
-    client:
-      "Client: American Express — worked as a Software Developer on American Express internal projects.",
-    date: "May 2024 - Nov2025",
+    company: "Stackko",
+    logoPath: "/images/stackko.png", // add this file to public/images
+    logoAlt: "Stackko logo",
+    title: "Java Developer — Stackko",
+    client: "B2B, Product-Based SaaS Startup",
+    date: "April 2026 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for American Express internal project.",
-      "Debugged complex authentication and configuration issues when application failures blocked critical business operations",
-      "Analyzed system logs, tracing API calls, and implementing targeted code fixes",
+      "Built a core multi-level (up to 4 levels) approval module that lets business clients configure their own approval chains, integrated with 2 external SaaS platforms.",
+      "Used Spring AOP to centralise auditing, logging and validation, cutting repeated code by ~20%, with declarative transaction management for safe rollback.",
+      "Tuned SQL queries and indexes on key approval APIs, improving response time by ~25%.",
+      "Built React.js components for real-time approval tracking, with role-based access control and 2FA for enterprise clients.",
     ],
   },
   {
+    company: "TCS",
+    logoPath: "/images/logo1.jpg",
+    logoAlt: "TCS logo",
+    clientLogo: "/images/Amex.png",
+    clientLogoAlt: "American Express logo",
+    title: "Java Full Stack Developer — TCS",
+    client: "Client: American Express — internal authentication and security platform.",
+    date: "May 2024 - Nov 2025",
+    responsibilities: [
+      "Developed and maintained full stack modules using Spring Boot (REST APIs) and React.js for an internal American Express authentication and security platform.",
+      "Implemented JWT-based authentication and Spring Security to enforce role-based access control across 4 user roles.",
+      "Debugged 20+ critical backend and frontend issues by analyzing logs and tracing API requests, reducing average resolution time by ~20%.",
+      "Wrote unit tests with JUnit and Mockito and collaborated with QA and DevOps during CI/CD deployments.",
+    ],
+  },
+  {
+    company: "iTuple Technologies",
     logoPath: "/images/logo2.png",
+    logoAlt: "iTuple Technologies logo",
+    clientLogo: "/images/fnp.png",
+    clientLogoAlt: "Ferns N Petals logo",
     title: "Full Stack Developer",
     date: "Feb 2023 - July 2023",
     responsibilities: [
@@ -98,7 +180,9 @@ const expCards = [
     ],
   },
   {
+    company: "MERN TA",
     logoPath: "/images/logo3.png",
+    logoAlt: "Company logo",
     title: "MERN TA",
     date: "May 2022 - Aug 2022",
     responsibilities: [
@@ -124,32 +208,6 @@ const expLogos = [
   },
 ];
 
-const techStackImgs = [
-  {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    name: "Node.js",
-    imgPath: "/images/logos/node.png",
-  },
-  {
-    name: "Spring Boot",
-    imgPath: "/images/logos/springboot.png",
-  },
-  {
-    name: "MongoDB",
-    imgPath: "/images/logos/mongoDB.png",
-  },
-  {
-    name: "JavaScript",
-    imgPath: "/images/logos/js.png",
-  },
-  {
-    name: "Git",
-    imgPath: "/images/logos/git.svg",
-  },
-];
 
 const socialImgs = [
   {
@@ -177,6 +235,7 @@ export {
   expCards,
   expLogos,
   socialImgs,
+  techStackIcons,
   techStackImgs,
   navLinks,
 };
