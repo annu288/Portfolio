@@ -78,27 +78,23 @@ const abilities = [
   },
 ];
 
+// Icons without an imgPath show their emoji instead.
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons";
+
 const techStackImgs = [
-  {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
-  },
-  {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
-  },
-  {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
-  },
-  {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
-  },
+  { name: "Spring Boot", imgPath: "/images/logos/springboot.png" },
+  { name: "React", imgPath: "/images/logos/react.png" },
+  { name: "MySQL", imgPath: `${DEVICON}/mysql/mysql-original.svg` },
+  { name: "Git", imgPath: "/images/logos/git.svg" },
+  { name: "Java", imgPath: `${DEVICON}/java/java-original.svg` },
+  { name: "JavaScript", imgPath: "/images/logos/js.png" },
+  { name: "Spring Security", emoji: "🔐" },
+  { name: "Spring AOP", emoji: "🧩" },
+  { name: "Redis", imgPath: `${DEVICON}/redis/redis-original.svg` },
+  { name: "Apache Kafka", imgPath: `${DEVICON}/apachekafka/apachekafka-original.svg` },
+  { name: "Jira", imgPath: `${DEVICON}/jira/jira-original.svg` },
+  { name: "Mockito", emoji: "🧪" },
+  { name: "OOPs", emoji: "🧱" },
 ];
 
 const techStackIcons = [
